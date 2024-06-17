@@ -9,6 +9,7 @@ public class C0206RecursiveBasic {
         }
         System.out.println(sum);
         System.out.println(addAcc(10));
+        // for 문으로 구할 수 있는 누적 합계를 재귀함수로 표현.
 
         // 피보나치 수열 구현 => 100번째
         // 1 1 2 3 5
