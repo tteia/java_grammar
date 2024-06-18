@@ -1,8 +1,7 @@
 package C05AnonymousLambda;
 
 import java.util.*;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
+
 
 public class C0504StreamAPI {
     public static void main(String[] args) {
