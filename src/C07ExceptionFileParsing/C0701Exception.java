@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class C0701Exception {
     public static void main(String[] args) {
-        System.out.println("나눗셈 프로그램입니다.");
+//        System.out.println("나눗셈 프로그램입니다.");
         Scanner sc = new Scanner(System.in);
 
         // 예외가 발생할 것으로 예상되는 코드에 try로 감싸고
@@ -38,25 +38,25 @@ public class C0701Exception {
 //        System.out.println("감사합니다.");
 
         // throws : 예외처리 위임을 명시.
-        login("1234");
-        try{
-            login2("1234");
-        }catch (SQLException e){
-            System.out.println(e.getMessage());
-        }
-    }
+//        login("1234");
+//        try{
+//            login2("1234");
+//        }catch (SQLException e){
+//            System.out.println(e.getMessage());
+//        }
+//    }
     // unchecked 예외에서는 throw 키워드가 예외사항을 명시하는 용도로만 사용된다.
     // checked : 다른 시스템과의 네트워크 (DB조회)
     // unchecked : 프로그램 자체의 이슈
-    static void login(String password) throws IllegalArgumentException{
-        if(password.length() < 10){
-            // throw new : 예외를 강제로 발생
-            // 예외는 기본적으로 메서드를 호출한 쪽에 전파
-            // unchecked 예외는 예외처리가 강제되지 않음.
-            throw new IllegalArgumentException("비밀번호가 너무 짧습니다");
-        }
-    }
-    static void login2(String password) throws SQLException{
+//    static void login(String password) throws IllegalArgumentException{
+//        if(password.length() < 10){
+//            // throw new : 예외를 강제로 발생
+//            // 예외는 기본적으로 메서드를 호출한 쪽에 전파
+//            // unchecked 예외는 예외처리가 강제되지 않음.
+//            throw new IllegalArgumentException("비밀번호가 너무 짧습니다");
+//        }
+//    }
+//    static void login2(String password) throws SQLException{
         // 방법 1. 직접 예외처리
 //        try{
 //            if(password.length() < 10) {
@@ -67,9 +67,9 @@ public class C0701Exception {
 //            e.printStackTrace();
 //        }
         // 방법2. 메서드를 호출한 쪽에 위임 : throws
-        if(password.length() < 10) {
-            throw new SQLException("DB조회 상황에서 예외가 발생했습니다.");
-        }
+//        if(password.length() < 10) {
+//            throw new SQLException("DB조회 상황에서 예외가 발생했습니다.");
+//        }
 
     }
 }
